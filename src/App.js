@@ -2,21 +2,21 @@
 import Counter from "./Counter"
 import Hello from "./Hello";
 import Check from "./Check"
-function App(){
-  const names = ["Jekabins","kistapins","emilins"];
-  const checks = [true, true, false];
-  const namesJSX = names.map((name, index) => {
-    return <Hello key={index} default={name} />
-
-  })
-  const checksJSX = checks.map((chec, indeks) => {
-    return <Check key={indeks} default={chec} />
-  })
+  function App(){
+    const masivs = [
+      "skaititajs",
+      "vistinasedajs",
+      "arbuzedajs",
+      "kokvilnas nemejs"
+    ]
+    const masivsJSX = masivs.map(entry =>{
+      return <Counter name={entry} key={entry}/>
+    })
+  
   return (
     <>
-    <Counter />
-    {namesJSX}
-    {checksJSX}
+    <h1>melno darbinieku skaititajs</h1>
+    {masivsJSX}
     </>
   )
 }

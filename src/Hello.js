@@ -9,7 +9,7 @@ function changeName(event){
 return (
     <div key={props.index}>
         <input value={name} onChange={changeName}></input>
-        <p>hello, {name}</p>
+        <p>vai sis cilveks ir sekmigs programmesana(, {name})</p>
     </div>
 );
 }

@@ -1,28 +1,24 @@
 
 import { useState } from "react";
 
-function Counter() {
-  const [ratio, setRatio] = useState(0);
-  const[ratioChange, setRatioChange] = useState(1);
-  function PlusRatio() {
-    setRatio(ratio + 1);
+function Counter(props) {
+  const [count, setCount] = useState(0);
+  const [input, setInput] = useState(1);
+  function palielinatajs() {
+    setCount(count + parseInt(input));
   }
-  const [nratio, setNratio] = useState(0);
-  function NegativeRatio() {
-    setNratio(ratio - 1);
-  }
-    function handleRatioChange(event) {
-      setRatioChange(event.target.value);
-    }
 
+function handleInput(event){
+  setInput(event.target.value);
+}
 
   
   return ( 
   <div className="App">
-    <input type="number" value={ratioChange} onChange={handleRatioChange}></input>
-  <button onClick={PlusRatio}>RATIO{ratioChange}</button>
-  <button onClick={NegativeRatio}>RATIO{ratioChange}</button>
-    <h1>{ratio}</h1>
+    <h2>{props.name}</h2>
+    <input type="number" value={input} onChange={handleInput}></input>
+  <button onClick={palielinatajs}>{input}</button>
+    <h1>{count}</h1>
   </div>
   );
 }
